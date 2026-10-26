@@ -1,0 +1,29 @@
+{
+  "name": "adsb-relay",
+  "version": "1.0.0",
+  "description": "Relays readsb aircraft data to a CesiumJS frontend over WebSocket",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "adsb",
+    "readsb",
+    "websocket",
+    "cesium"
+  ],
+  "author": "Ry",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/ws": "^8.18.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
