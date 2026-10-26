@@ -21,7 +21,7 @@ export function normalize(raw: RawAircraft): Aircraft | null {
       lon: raw.lon,
       altM,
     },
-    direction: raw.track ?? null,
+    heading: raw.track ?? null,
     speedKt: raw.gs ?? null,
     verticalRateFpm: raw.baro_rate ?? null,
     onGround: raw.alt_baro === "ground",

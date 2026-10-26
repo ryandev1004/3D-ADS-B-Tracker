@@ -40,7 +40,7 @@ export type Aircraft = {
     lon: number;
     altM: number;                // meters
   };
-  direction: number | null;        // degrees
+  heading: number | null;        // degrees
   speedKt: number | null;
   verticalRateFpm: number | null;
   onGround: boolean;

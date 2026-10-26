@@ -2,7 +2,8 @@ import "cesium/Build/Cesium/Widgets/widgets.css";
 import "./style.css";
 import * as Cesium from "cesium";
 import { connectRelay } from "./relay";
-import { createPlaneLayer } from "./planes";
+import { createPlaneLayer } from "./planes/planes";
+import { addReceiverMarker } from "./receiver";
 
 Cesium.Ion.defaultAccessToken = import.meta.env.VITE_CESIUM_ION_TOKEN;
 
@@ -22,6 +23,7 @@ async function main() {
 
   const tileset = await Cesium.createGooglePhotorealistic3DTileset();
   viewer.scene.primitives.add(tileset);
+  addReceiverMarker(viewer);
 
   // Start southwest of Rowan, looking northeast toward PHL
   viewer.camera.flyTo({
